@@ -12,9 +12,7 @@ logger = logging.getLogger('debug')
 class TestCase(_TestCase):
     def mock_transaction_methods(self):
         def fake(*args, **kwargs):
-            raise AssertionError(
-                'Can\'t use transaction mode. Use "db_unique=True"'
-            )
+            raise AssertionError('Can\'t use transaction mode.')
 
         methods = [
             'commit', 'rollback', 'managed',
