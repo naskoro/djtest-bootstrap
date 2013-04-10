@@ -29,7 +29,7 @@ class TestCase(_TestCase):
         for db in settings.DATABASES.values():
             if db['NAME'] == ':memory:':
                 continue
-            elif 'TEST_NAME' in db:
+            elif db['NAME'].startswith('test_'):
                 continue
             test_name = connection.creation._get_test_db_name()
             db['NAME'] = test_name
@@ -50,6 +50,5 @@ class TestCase(_TestCase):
     def _fixture_teardown(self):
         for mok in self._transaction_mocks:
             mok.stop()
-
         transaction.rollback()
         transaction.leave_transaction_management()

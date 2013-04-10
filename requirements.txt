@@ -1,0 +1,8 @@
+Django==1.5.1
+execnet==1.1
+mock==1.0.1
+psycopg2==2.5
+py==1.4.13
+pytest==2.3.4
+pytest-xdist==1.8
+wsgiref==0.1.2

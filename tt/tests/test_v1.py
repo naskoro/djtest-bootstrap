@@ -15,22 +15,18 @@ class TestV1(TestCase):
         res = self.client.get('/admin/')
         self.assertContains(res, 'this_is_the_login_form')
 
-    #@_statprof
     def test_v1(self):
         self.go_to_admin()
 
-    #@_statprof
     def test_v2(self):
         self.go_to_admin()
         self.go_to_admin('admin2')
 
-    #@_statprof
     def test_v3(self):
         self.go_to_admin()
         self.go_to_admin('admin2')
         self.go_to_admin('admin3')
 
-    #@_statprof
     def test_v4(self):
         self.go_to_admin()
         self.go_to_admin('admin2')
