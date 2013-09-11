@@ -114,4 +114,4 @@ Try only **24** tests::
     $ ./manage.py nose2 testing.tests.test_v1 --processes=3
         15.46s user 0.12s system 130% cpu 11.942 total
 
-Maybe need more measures, but even that results it is good point for understanding.
+Maybe need more measures, but even these results it is good point for understanding.
