@@ -78,7 +78,7 @@ Repository has some synthetic tests in ``"testing/tests"`` for trying.
 
 **NB:** Postgresql used as database backend.
 
-Try on **all (216)** tests::
+Try on **all 216** tests::
 
     ## Ran 216 tests
 
