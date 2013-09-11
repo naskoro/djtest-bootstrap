@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 #from django.test import TestCase
 
-from tt.cases import TestCase
+from testing.cases import TestCase
 
 
 class TestV1(TestCase):
