@@ -69,6 +69,8 @@ Example of using different runner::
     # nose2
     $ ./manage.py nose2 testing.tests.test_v1 --processes=3
 
+**Warning:** Need tuning ``nose`` and ``nose2`` support.
+
 
 Some measures
 -------------
@@ -113,5 +115,3 @@ Try only **24** tests::
         15.46s user 0.12s system 130% cpu 11.942 total
 
 Maybe need more measures, but even that results it is good point for understanding.
-
-**Warning:** Need tuning ``nose`` and ``nose2`` support.
