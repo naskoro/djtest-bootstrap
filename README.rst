@@ -1,6 +1,6 @@
 Bootstrap multiprocess tests
 ============================
-**NB:** Support transaction tests.
+**NB:** Support transaction tests only.
 
 **Tested with postgresql and sqlite.** Look at ``DATABASES`` in ``"ptest/settings.py"``.
 
