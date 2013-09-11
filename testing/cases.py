@@ -2,7 +2,7 @@ import logging
 
 from django.conf import settings
 from django.contrib.auth.models import User
-from django.db import transaction, connection, DatabaseError
+from django.db import transaction, connection, close_connection, DatabaseError
 from django.test import TestCase as _TestCase
 from mock import patch
 
@@ -26,14 +26,13 @@ class TestCase(_TestCase):
         self._transaction_mocks = mocks
 
     def fix_db(self):
-        for db in settings.DATABASES.values():
-            if db['NAME'] == ':memory:':
-                continue
-            elif db['NAME'].startswith('test_'):
-                continue
+        db = settings.DATABASES['default']
+        if db['NAME'] != ':memory:' and not db['NAME'].startswith('test_'):
             test_name = connection.creation._get_test_db_name()
             db['NAME'] = test_name
             db['TEST_NAME'] = test_name
+
+        close_connection()
 
         try:
             User.objects.count()

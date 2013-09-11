@@ -8,4 +8,4 @@ class Command(object):
         import pytest
 
         with run_tests():
-            nose2.main(argv[2:])
+            pytest.main(argv[2:])

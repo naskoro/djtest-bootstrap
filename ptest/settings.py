@@ -30,7 +30,7 @@ DATABASES_PG = {
     }
 }
 
-DATABASES = DATABASES_SQLITE
+DATABASES = DATABASES_PG
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name

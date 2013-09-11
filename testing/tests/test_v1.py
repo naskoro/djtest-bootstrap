@@ -33,6 +33,10 @@ class TestV1(TestCase):
         self.go_to_admin('admin3')
         self.go_to_admin('admin4')
 
+    def test_v5(self):
+        for n in range(20):
+            self.go_to_admin('admin' + str(n))
+
 
 class TestV2(TestCase):
     def setUp(self):
