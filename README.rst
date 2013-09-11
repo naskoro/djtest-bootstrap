@@ -1,5 +1,5 @@
-Bootstrap multiprocess tests in django project
-==============================================
+Bootstrap multiprocess tests
+============================
 **NB:** Support transaction tests.
 
 **Tested with postgresql and sqlite.** Look at ``DATABASES`` in ``"ptest/settings.py"``.
