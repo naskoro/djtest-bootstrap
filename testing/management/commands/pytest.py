@@ -1,4 +1,4 @@
-from . import run_tests
+from testing import run_tests
 
 
 class Command(object):
