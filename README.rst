@@ -69,7 +69,7 @@ Example of using different runner::
     # nose2
     $ ./manage.py nose2 testing.tests.test_v1 --processes=3
 
-**Warning:** Need tuning ``nose`` and ``nose2`` support.
+**Warning:** Need to improve ``nose`` and ``nose2`` support.
 
 
 Some measures
