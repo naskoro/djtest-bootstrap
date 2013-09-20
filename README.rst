@@ -79,7 +79,7 @@ Repository has some synthetic tests in ``"testing/tests"`` for trying.
 System configuration
   ::
 
-    Intel Core i5-3210M CPU, SSD, Mem~8G
+    Intel Core i5-3210M, SSD, Mem~8G
     Kernel~3.10.5-1-ARCH x86_64
 
     PostgreSQL 9.2.4; fsync=off
