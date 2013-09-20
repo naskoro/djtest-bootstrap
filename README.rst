@@ -76,7 +76,8 @@ Some measurements
 -----------------
 Repository has some synthetic tests in ``"testing/tests"`` for trying.
 
-System configuration::
+System configuration
+  ::
 
     Intel Core i5-3210M CPU, SSD, Mem~8G
     Kernel~3.10.5-1-ARCH x86_64
