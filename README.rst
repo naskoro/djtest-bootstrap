@@ -111,6 +111,10 @@ Try on **all 216** tests::
     # 1 process
     $ ./manage.py pytest testing
         122.77s user 0.56s system 97% cpu 2:06.26 total
+    $ ./manage.py nose testing
+        123.16s user 0.52s system 97% cpu 2:06.48 total
+    $ ./manage.py nose2 testing
+        122.16s user 0.60s system 97% cpu 2:05.57 total
 
     # 3 process
     $ ./manage.py pytest testing -n3
@@ -146,12 +150,12 @@ Try on **all 216** tests::
         123.15s user 0.38s system 100% cpu 2:03.39 total
 
     # 4 process
+    $ ./manage.py pytest testing -n4
+        61.37s user 0.29s system 96% cpu 1:03.58 total
     $ ./manage.py nose testing --processes=4
         246.00s user 0.85s system 383% cpu 1:04.41 total
     $ ./manage.py nose2 testing -N4
         197.82s user 0.57s system 305% cpu 1:04.86 total
-    $ ./manage.py pytest testing -n4
-        61.37s user 0.29s system 96% cpu 1:03.58 total
 
     # 3 process
     $ ./manage.py pytest testing -n3
