@@ -40,7 +40,6 @@ Example of ``pytest`` command:
             yield
         finally:
             teardown_test_environment()
-        from testing import run_tests
 
 
     ### testing/management/commands/pytest.py ###
