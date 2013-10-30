@@ -5,7 +5,24 @@ Bootstrap multiprocess tests
 **Tested with postgresql and sqlite.** Look at ``DATABASES`` in ``"ptest/settings.py"``.
 
 Run test with multiprocess via ``nose``, ``nose2`` or ``pytest``.
-Use little bit of code for it::
+
+Example of using different runner::
+
+    # pytest
+    $ ./manage.py pytest testing/tests/test_v1.py -n3
+
+    # nose
+    $ ./manage.py nose testing/tests/test_v1.py -N3
+    $ ./manage.py nose testing.tests.test_v1 --processes=3
+    $ ./manage.py nose testing --processes=3 --process-timeout=300
+
+    # nose2
+    $ ./manage.py nose2 testing.tests.test_v1 --processes=3
+
+**Warning:** Need to improve ``nose`` and ``nose2`` support.
+
+
+Used little bit of code for that::
 
     $ ll testing
         4.0K management/
@@ -54,22 +71,6 @@ Example of ``pytest`` command:
 
             with run_tests():
                 pytest.main(argv[2:])
-
-Example of using different runner::
-
-    # pytest
-    $ ./manage.py pytest testing/tests/test_v1.py -n3
-
-    # nose
-    $ ./manage.py nose testing/tests/test_v1.py -N3
-    $ ./manage.py nose testing.tests.test_v1 --processes=3
-    $ ./manage.py nose testing --processes=3 --process-timeout=300
-
-    # nose2
-    $ ./manage.py nose2 testing.tests.test_v1 --processes=3
-
-**Warning:** Need to improve ``nose`` and ``nose2`` support.
-
 
 Some measurements
 -----------------
