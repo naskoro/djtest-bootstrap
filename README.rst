@@ -19,9 +19,6 @@ Example of using different runner::
     # nose2
     $ ./manage.py nose2 testing.tests.test_v1 --processes=3
 
-**Warning:** Need to improve ``nose`` and ``nose2`` support.
-
-
 Used little bit of code for that::
 
     $ ll testing
@@ -35,6 +32,8 @@ Used little bit of code for that::
         191 nose.py
         211 nose2.py
         195 pytest.py
+
+**Warning:** Need to improve ``nose`` and ``nose2`` support.
 
 Example of ``pytest`` command:
 
@@ -86,8 +85,8 @@ System configuration
     Python 3.3.2
     Django 1.5.3
 
-Postgresql used as database backend
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+With PostgreSQL
+~~~~~~~~~~~~~~~
 
 Try only **24** tests::
 
@@ -137,8 +136,8 @@ Try on **all 216** tests::
     $ ./manage.py pytest testing -n5
         28.73s user 0.20s system 28% cpu 1:42.65 total
 
-Sqlite used as database backend
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+With SQLite
+~~~~~~~~~~~
 
 Try on **all 216** tests::
 
